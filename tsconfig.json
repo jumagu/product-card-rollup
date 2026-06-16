@@ -1,0 +1,36 @@
+{
+  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
+  // Dev/editor config: VS Code's TS server auto-discovers ONLY files literally
+  // named tsconfig.json, so this is the file the editor uses. It includes tests
+  // and pulls in vitest/globals types so describe/test/expect resolve with no imports.
+  // The library is built by Rollup via tsconfig.build.json (emit + clean rootDir).
+  "include": ["src", "tests"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "target": "es2025",
+    "module": "esnext",
+    "lib": ["DOM", "ESNext"],
+    // use Node's module resolution algorithm, instead of the legacy TS one
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    // editor/type-check only; emitting is Rollup's job (tsconfig.build.json)
+    "noEmit": true,
+    // stricter type-checking for stronger correctness. Recommended by TS
+    "strict": true,
+    // linter checks for common issues
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // noUnused* overlap with @typescript-eslint/no-unused-vars, can disable if duplicative
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // transpile JSX to React.createElement
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    // interop between ESM and CJS modules. Recommended by TS
+    "esModuleInterop": true,
+    // significant perf increase by skipping checking .d.ts files. Recommended by TS
+    "skipLibCheck": true,
+    // makes vitest's describe/test/expect globally available without imports
+    "types": ["vitest/globals"]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  // Build config used by Rollup (@rollup/plugin-typescript). Emits the library and
+  // .d.ts declarations from src only, with clean output paths (dist/index, dist/types).
+  "extends": "./tsconfig.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "noEmit": false,
+    // match output dir to input dir. e.g. dist/index instead of dist/src/index
+    "rootDir": "./src",
+    "outDir": "dist",
+    // output .d.ts declaration files for consumers
+    "declaration": true,
+    "declarationDir": "dist/types",
+    // output .js.map sourcemap files for consumers
+    "sourceMap": true
+  }
+}
