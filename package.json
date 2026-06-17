@@ -1,11 +1,13 @@
 {
   "name": "jumagu-product-card-rollup",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Card Component for React applications using the \"Compound Component\" and \"Function as a child\" patterns.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "typings": "dist/types/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jumagu/product-card-rollup"
