@@ -9,25 +9,25 @@ Card Component for React applications using the "Compound Component" and "Functi
 Using npm:
 
 ```bash
-$ npm install jumagu-product-card
+$ npm install jumagu-product-card-rollup
 ```
 
 Using bower:
 
 ```bash
-$ bower install jumagu-product-card
+$ bower install jumagu-product-card-rollup
 ```
 
 Using yarn:
 
 ```bash
-$ yarn add jumagu-product-card
+$ yarn add jumagu-product-card-rollup
 ```
 
 Using pnpm:
 
 ```bash
-$ pnpm add jumagu-product-card
+$ pnpm add jumagu-product-card-rollup
 ```
 
 ## Guide & Examples
@@ -55,7 +55,7 @@ import {
   ProductImage,
   ProductTitle,
   ProductButtons,
-} from "jumagu-product-card";
+} from "jumagu-product-card-rollup";
 
 const product: Product = {
   id: "1",
@@ -71,7 +71,7 @@ export const Products = () => {
       <ProductButtons />
 
       {/* Other components */}
-      <Price price={45}>
+      <Price price={45} />
     </ProductCard>
   );
 };
@@ -131,7 +131,7 @@ import {
   ProductTitle,
   ProductButtons,
   useShoppingCart,
-} from "jumagu-product-card";
+} from "jumagu-product-card-rollup";
 
 import { products } from "../data/products.data";
 
